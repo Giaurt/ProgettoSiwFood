@@ -1,0 +1,157 @@
+body{
+	  margin: 0px;
+	  background-color: #FEFAE0;
+}
+.intest{
+	padding: 30px 0px 40px 0px;
+}
+.intest-text{
+	text-align: center;
+	color: #783d19;
+}
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  background-color: #FEFAE0;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 100%;
+  font-size: 14px;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+	font-size: 20px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: #783d19;
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #f9ebc7;
+  font-weight: 600;
+}
+
+
+.form-container {
+	margin: auto;
+	height: 500px;
+  width: 400px;
+  background: linear-gradient(#f9ebc7, #f9ebc7) padding-box,
+              linear-gradient(145deg, transparent 35%,#783d19, #c4661f) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #783d19;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #783d19;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.form-container .form-group input {
+  width: 91%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #783d19;
+  font-family: inherit;
+  background-color: transparent;
+  border: 2px solid #c4661f;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #783d19;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #783d19;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #783d19;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #783d19;
+  font-weight: 600;
+  width: 40%;
+  background: #c4661f;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #783d19;
+  border-color: #c4661f;
+  color: #c4661f;
+}
+
+
+

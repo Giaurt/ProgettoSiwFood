@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title>SiwFood</title> 
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/ricetta.css">
+  <link rel="stylesheet" href="/css/global.css">
+
+</head>
+<body>
+	
+<header class="header">
+		<a href="/">
+			<div class="titolo">SiwFood</div>
+		</a>
+		<div class="buttons">
+
+			<div th:unless="${cuocoDetails}">
+				<a class="login-button" href="/login">
+				<img class="icon"  src="/images/login.png" width="7%" >
+			</a>
+			</div>
+			<div th:if="${cuocoDetails}">
+				
+				<a class="login-button" href="/profile">
+				<img class="icon"  src="/images/account.png" width="7%" >
+			</div>
+	</header>
+	
+	<div class="links">
+		
+		<a class="link" href="/ricette">Ricette ></a>
+		<div class="link">
+			
+				<div th:if="${ricetta.tipo.equals('Antipasto')}">
+				<a style="color:#783d19" href="/antipasti" >Antipasto ></a>
+			</div>
+			<div th:if="${ricetta.tipo.equals('Primo')}">
+				<a style="color:#783d19" href="/primi" >Primo ></a>
+			</div>
+			<div th:if="${ricetta.tipo.equals('Secondo')}">
+				<a style="color:#783d19" href="/secondi" >Secondo ></a>
+			</div>
+			<div th:if="${ricetta.tipo.equals('Dessert')}">
+				<a style="color:#783d19" href="/dessert" >Dessert ></a>
+			</div>
+			
+		</div>
+		
+		<a class="link" th:href="@{'/ricetta' + '/' + ${ricetta.id}}" th:text="${ricetta.nome}" ></a>
+		
+	</div>
+	
+	
+	<div class="titolo-ricetta" th:text="${ricetta.nome}">
+		
+	</div>
+	
+	<div class="nome-cuoco" th:text="By + ${ricetta.cuoco}">
+		
+	</div>
+	
+	 
+		<div id="flex-container">
+			<span class="container">
+<!--				<div>-->
+						<img class="immagine" width "40%" th:src="@{'data:image/jpeg;base64,'+${ricetta.defaultImage.generateBase64Image()}}"/>
+<!--					</div>-->
+				<div class="banner">
+					
+				<div class="ingredienti" >
+					
+					ingredienti
+						
+
+				</div>
+				
+				</div>
+			
+			
+				
+				<li class="ricette-banner" th:if="${#lists.size(ricette) > 1}">
+					<span class="flex-ricette">
+					<a class="flex-item" th:each="ricettaflex : ${ricette}" th:href="@{'/ricetta' + '/' + ${ricettaflex.id}}" th:if="${ricettaflex.id != ricetta.id}">
+				 		 <img class="small-img" th:src="@{'data:image/jpeg; base64, '+${ricettaflex.defaultImage.generateBase64Image()}}"></img>
+				 		 <br>
+	       				 <div class="ricetta-text" th:text="${ricettaflex.nome}">Up! (2000)</div>
+		  			</a>
+		  			</span>
+		  		</li >
+		  		
+		  		</span>
+		  		
+			
+		
+    <div style="text-align: end;" th:unless="${ricetta}">Non esiste</div>
+
+
+	<div class="banner-descrizione">
+		
+		<div class="testo-descrizione" th:text="${ricetta.descrizione}">
+			
+		</div>
+		
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--  <head>-->
+<!--	 <meta charset="utf-8">-->
+<!--  	<meta name="viewport" content="width=device-width">-->
+<!--    <link href="/css/ricetta.css" rel="stylesheet">-->
+<!--    <title>Ricetta</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--	  <nav>-->
+<!--		  <h1>-->
+<!--			  <a class="homepage" th:href="@{/ricette}" + th:text="SiwFood"></a>-->
+<!--		  </h1>-->
+<!--	  </nav>-->
+<!--    <div th:if="${ricetta}">-->
+<!--    <h1 class="ricetta" style="font-size:70px" th:text="${ricetta.nome}">Nome Ricetta</h1>-->
+<!--    </div>-->
+<!--	<div>-->
+<!--	<h2 th:text="By + ${ricetta.cuoco}"></h2>-->
+<!--    </div>-->
+<!--		<div id="flex-container">-->
+<!--			<span class="container">-->
+<!--				<div class="banner">-->
+<!--					<em>-->
+<!--						<img class="immagine" width "40%" th:src="${ricetta.urlImage}"/>-->
+<!--					</em>-->
+<!--				<em class="description">-->
+<!--						<em th:text="${ricetta.cuoco}">-->
+						
+<!--						</em>-->
+<!--				</em>-->
+<!--				</div>-->
+<!--			</span>-->
+			
+			
+			
+			
+			
+			
+		
+				
+<!--				<li class="ricette-banner">-->
+<!--					<span id="flex-ricette">-->
+						
+<!--							<div class="product-scroller">-->
+<!--            <a class="flex-item" th:each="ricettaflex : ${ricette}" th:href="@{'/ricetta' + '/' + ${ricettaflex.id}}">-->
+<!--								  <div th:if="${ricettaflex.id != ricetta.id}">-->
+<!--						 		 <img class="small-img" th:src=${ricettaflex.urlImage} />-->
+<!--						 		 <br>-->
+<!--			       				 <div class="ricetta-text" th:text="${ricettaflex.nome}">Up! (2000)</div>-->
+<!--			       				 </div>-->
+<!--		  							</a>-->
+<!--    </div>-->
+			
+						
+<!--						<div class="slider-container">-->
+<!--					        <div class="slider">-->
+					            
+<!--					            <a class="flex-item" th:each="ricettaflex : ${ricette}" th:href="@{'/ricetta' + '/' + ${ricettaflex.id}}">-->
+<!--								  <div th:if="${ricettaflex.id != ricetta.id}">-->
+<!--						 		 <img class="small-img" th:src=${ricettaflex.urlImage} />-->
+<!--						 		 <br>-->
+<!--			       				 <div class="ricetta-text" th:text="${ricettaflex.nome}">Up! (2000)</div>-->
+<!--			       				 </div>-->
+<!--		  							</a>-->
+								
+					            
+<!--					        </div>-->
+
+<!--					    </div>-->
+					
+					    
+						
+						
+						
+					
+<!--		  			</span>-->
+<!--		  		</li >-->
+		  		
+			
+<!--		</div>-->
+<!--    <div style="text-align: end;" th:unless="${ricetta}">Non esiste</div>-->
+<!--  </body>-->
+<!--</html>-->
+
+

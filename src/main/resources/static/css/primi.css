@@ -1,0 +1,117 @@
+  *{
+	  text-decoration: none;
+  }
+  body{
+	  margin: 0px;
+	  background-color: #FEFAE0;
+  }
+  .intest{
+	  margin: auto;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 60px;
+	  width: 100%;
+	  background-color: rgba(255, 128, 0, 0.4);
+	  }
+.intest-text{
+	padding-top:20px;
+    font-size: 40px;;
+    color: #783d19;
+	  }
+/* #flex-container{*/
+/*      display: flex;*/
+/*      padding: 5px;*/
+/*      border: 2px solid green;*/
+/*      height: 150px;*/
+/*  }*/
+  .flex-item{
+	  background-color: #c4661f;
+      border-radius: 10px;
+      margin: 20px;
+      padding-bottom: 9px;
+ /*   border: 2px solid rgba(0, 128, 255, 1);*/
+  }
+.flex-item:hover{
+	transform: scale(1.01);
+}
+.ricetta-img{
+	width: 300px;
+	height: 200px;
+	border-radius: 10px;
+}
+.inline-block {
+	display: inline-block
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding-top: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.ricetta-text{
+	display: flex;
+	font-size: 20px;
+	justify-content: center;
+	color: #FEFAE0;
+}
+.category-container{
+	margin: auto;
+	width: 100%;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: rgba(255, 128, 0, 0.4);
+}
+
+
+
+
+
+
+.button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #783d19;
+  background-color: #FEFAE0;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #783d19;
+}
+
+button:hover {
+  color: #FEFAE0;
+  transform: scale(1.1);
+  outline: 2px solid #783d19;
+  box-shadow: 4px 5px 17px -4px #c4661f;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #c4661f;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+

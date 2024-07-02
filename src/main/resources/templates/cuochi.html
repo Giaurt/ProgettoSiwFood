@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/ricette.css">
+  <title>SiwFood</title>
+</head>
+<body>
+	  <div class="top">
+		  <a class="title">SiwFood</a>
+  </div>
+  	<br>
+  	<br>
+  	<br>
+  <div class="intest">
+	    <a class="header">Esplora Centinaia Di Ricette!</a>
+  </div>
+
+  <em>
+	  <li class = "container">
+      <a class="flex-item"th:each="cuoco : ${cuochi}" th:href="@{'/cuoco' + '/' + ${cuoco.id}}">
+        <div class="ricetta-text" th:text="${cuoco.nome}">Up! (2000)</div>
+	  </a>
+	  </li>
+    </em>
+</body>
+</html>

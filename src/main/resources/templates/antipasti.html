@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/antipasti.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <title>SiwFood</title>
+</head>
+<body>
+	<header class="header">
+		<a href="/">
+			<div class="titolo">SiwFood</div>
+		</a>
+		
+		<div class="buttons">
+			
+			
+			<div th:unless="${cuocoDetails}">
+				<a class="login-button" href="/login">
+				<img class="icon"  src="/images/login.png" width="7%" >
+			</a>
+			</div>
+			
+			
+			
+			<div th:if="${cuocoDetails}">
+				
+				<a class="login-button" href="/profile">
+				<img class="icon"  src="/images/account.png" width="7%" >
+				
+			</div>
+
+			
+	</header>
+	  
+<!--  	<br>-->
+<!--  	<br>-->
+<!--  	<br>-->
+<div class="intest">
+	<a class="intest-text">
+		Esplora tutte le nostre ricette!
+	</a>
+</div>
+<!--  <div class="intest">-->
+<!--	    <a >Esplora tutte le nostre ricette!</a>-->
+<!--  </div>-->
+  
+  <div class="category-container">
+	  
+			<a href="/primi"> <button class="button">Primo</button> </a>
+			<a href="/secondi"> <button class="button">Secondo</button> </a>
+			<a href="/dessert"> <button class="button">Dessert</button> </a>
+
+
+  </div>
+
+  <div th:if="${antipasti.isEmpty()}">Non ci sono ricette nel sistema</div>
+  <em>
+	  <li class = "container">
+      <a class="flex-item"th:each="antipasto : ${antipasti}" th:href="@{'/ricetta' + '/' + ${antipasto.id}}">
+			  <img class="ricetta-img" th:src="@{'data:image/jpeg; base64, '+${antipasto.defaultImage.generateBase64Image()}}"></img>
+        <div class="ricetta-text" th:text="${antipasto.nome}">Up! (2000)</div>
+	  </a>
+	  </li>
+    </em>
+</body>
+</html>

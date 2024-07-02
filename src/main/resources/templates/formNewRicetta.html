@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Nuova Ricetta
+	</title>
+	<link rel="stylesheet" href="/css/formNewRicetta.css" />
+	<link rel="stylesheet" href="/css/global.css" />
+</head>
+
+<body>
+	
+	
+		<header class="header">
+		<a href="/">
+			<div class="titolo">SiwFood</div>
+		</a>
+		
+		<div class="buttons">
+			
+			
+			<div th:unless="${cuocoDetails}">
+				<a class="login-button" href="/login">
+				<img class="icon"  src="/images/login.png" width="7%" >
+			</a>
+			</div>
+			
+			
+			
+			<div th:if="${cuocoDetails}">
+				
+				<a class="login-button" href="/profile">
+				<img class="icon"  src="/images/account.png" width="7%" >
+				
+			</div>
+
+			
+	</header>
+	
+	
+<!--	<header>-->
+<!--		<div th:if="${userDetails}">-->
+<!--			<span th:text="${userDetails.username}"></span>-->
+<!--			<a href="/logout">Logout</a>-->
+<!--		</div>-->
+<!--		<div th:unless="${user}">-->
+<!--			<a href="/login">Login</a>-->
+<!--		</div>-->
+<!--	</header>-->
+	
+<!--	<div><a href="/"><img src="/images/logo-siw.png" width="50%"/></a></div>-->
+	
+	<div class="intest">
+		
+		<h1 class="intest-text">Aggiungi una ricetta</h1>
+		
+	</div>
+	
+	
+
+	
+	
+	
+<!--	<div class="form-container">-->
+<!--      <form class="form" th:action="@{/ricetta}" method="POST" th:object="${ricetta}" enctype="multipart/form-data">-->
+<!--        <div class="form-group">-->
+<!--          <label for="Nome">Nome</label>-->
+<!--          <input type="text" id="nome" name="nome" th:field="${ricetta.nome}">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--          <label for="textarea">Descrizione</label>-->
+<!--          <input type="text" id="descrizione" name="descrizione" th:field="${ricetta.descrizione}">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--			<select id="tipo" name="tipo" th:field="${ricetta.tipo}">-->
+<!--			  <option value="Antipasto">Antipasto</option>-->
+<!--			  <option value="Primo">Primo</option>-->
+<!--			  <option value="Secondo">Secondo</option>-->
+<!--			  <option value="Dessert">Dessert</option>-->
+<!--		  </select>-->
+<!--		</div>-->
+
+<!--		<div>-->
+<!--			<input-->
+<!--			name="file"-->
+<!--			type="file"-->
+<!--			id="file-upload"-->
+<!--			accept="image/png, image/jpeg"-->
+<!--			required>-->
+<!--		</div>-->
+<!--        <button class="form-submit-btn" type="submit">Submit</button>-->
+<!--      </form>-->
+<!--    </div>-->
+    
+    
+    
+    
+    	<div class="form-container">
+      <form class="form" th:action="@{/ricetta}" method="POST" th:object="${ricetta}" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="Nome">Nome</label>
+          <input type="text" id="nome" name="nome" th:field="${ricetta.nome}">
+        </div>
+        <div class="form-group">
+          <label for="textarea">Descrizione</label>
+          <input type="text" id="descrizione" name="descrizione" th:field="${ricetta.descrizione}">
+        </div>
+        
+        
+        <div class="radio-inputs">
+  <label class="radio">
+    <input type="radio" name="tipo" value="Antipasto" th:field="${ricetta.tipo}">
+    <span class="name">Antipasto</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="tipo" value="Primo" th:field="${ricetta.tipo}">
+    <span class="name">Primo</span>
+  </label>
+      
+  <label class="radio">
+    <input type="radio" name="tipo" value="Secondo" th:field="${ricetta.tipo}">
+    <span class="name">Secondo</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="tipo" value="Dessert" th:field="${ricetta.tipo}">
+    <span class="name">Dessert</span>
+  </label>
+</div>
+        
+<!--        <div>-->
+<!--			<select id="tipo" name="tipo" th:field="${ricetta.tipo}">-->
+<!--			  <option value="Antipasto">Antipasto</option>-->
+<!--			  <option value="Primo">Primo</option>-->
+<!--			  <option value="Secondo">Secondo</option>-->
+<!--			  <option value="Dessert">Dessert</option>-->
+<!--		  </select>-->
+<!--		</div>-->
+
+		<div>
+			<input
+			name="file"
+			type="file"
+			id="file-upload"
+			accept="image/png, image/jpeg"
+			required>
+		</div>
+        <button class="form-submit-btn" type="submit">Submit</button>
+      </form>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+
+</html>

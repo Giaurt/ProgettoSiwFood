@@ -1,0 +1,142 @@
+*{
+	  text-decoration: none;
+  }
+
+.immagine{
+	display: inline-block;
+	width: 700px;
+	height: 400px;
+	border-radius: 10px;
+	margin-left: 130px;
+}
+.links{
+	font-size: 20px;
+	padding: 60px 0px 0px 130px;
+}
+.link{
+	color: #783d19;
+	display: inline-block;
+}
+.titolo-ricetta{
+	color: #783d19;
+	font-size: 70px;
+	padding: 10px 0px 10px 130px;	
+}
+.nome-cuoco{
+	color:#783d19;
+	font-size: 30px;
+	padding: 20px 0px 10px 130px;
+}
+.small-img{
+	width: 300px;
+	height: 200px;
+	border-radius: 10px;	
+}
+.banner{
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 10px;
+	width: 400px;
+	height: 400px;
+	background-color: rgba(255, 150, 0, 0.3);
+	margin:0px 0px 0px 20px;
+}
+/*.container{*/
+/*	display: flex;*/
+/*	justify-content: center;*/
+/*}*/
+.ingredienti{
+	font-size: 20px;
+	padding: 20px 10px 20px 20px;
+	color: #783d19;
+	align-items: center;
+}
+.homepage{
+	font-size: 60px;
+	color: green;
+	text-decoration: none;
+	text-align: left;
+}
+.ricetta-text{
+	font-size: 20px;
+	text-align: center;
+	color: rgb(0, 0, 0);
+}
+.ricette-banner{
+	display: inline-block;
+	border-radius: 10px;
+	background-color: rgba(255, 150, 0, 0.3);
+	width: 400px;
+	height: 600px;
+	overflow: hidden;
+	margin-left: 130px;
+	vertical-align: top;
+}
+/*.ricette-banner {*/
+/*	display: inline-block;*/
+/*	background-color: rgba(255, 150, 0, 0.3);*/
+/*    width: 300px;*/
+/*    height: 200px;*/
+/*    border: 1px solid #ccc;*/
+/*    margin: 20px auto;*/
+/*    overflow: hidden;*/
+/*}*/
+.flex-item{
+/*	display: block;*/
+	border-radius: 10px;
+	margin: 15px 0px 0px 20px;
+}
+.flex-item:hover{
+	background-color: #C4661F;
+/*	border: 1px solid #C4661F;*/
+}
+/*#flex-container{*/
+/*	display: flex;*/
+/*	height: 600px;*/
+/*	justify-content: space-around;*/
+/*}*/
+.flex-ricette{
+	height: inherit;
+/*	flex-wrap: wrap;*/
+	width: inherit;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	align-items: center;
+/*	padding-top: 30px;*/
+}
+.flex-ricette::-webkit-scrollbar {
+  width: 3px; /* Width of the scrollbar */
+}
+
+/* Track */
+.flex-ricette::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0); /* Color of the scrollbar track */
+}
+
+/* Handle */
+.flex-ricette::-webkit-scrollbar-thumb {
+  background: rgb(255, 128, 0); /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+.flex-ricette::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
+}
+.banner-descrizione{
+	overflow: hidden;
+	word-wrap: break-word;
+	height: 170px;
+	width: 60%;
+	background-color: rgba(255, 150, 0, 0.3);
+	border-radius: 10px;
+	margin: 20px 0px 40px 130px;
+}
+.testo-descrizione{
+	white-space: normal;
+	font-size: 30px;
+	color: #783d19;
+	padding: 30px 40px 30px 40px; 
+}
+
+
